@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/playerOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/player_one"
+        android:textColor="@color/white"
+        android:background="#FF0000"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="15dp"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/playerOneScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/player_one_initial_score"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/playerOne"
+        app:layout_constraintStart_toStartOf="@+id/playerOne"
+        android:layout_marginStart="35dp"/>
+
+    <TextView
+        android:id="@+id/playerTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FF00"
+        android:text="@string/player_two_text"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/playerTwoScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/player_one_initial_score"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/playerTwo"
+        app:layout_constraintStart_toStartOf="@+id/playerTwo"
+        android:layout_marginStart="35dp"/>
+
+    <TextView
+        android:id="@+id/playerStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="20sp"
+        android:textColor="@color/purple_500"
+        app:layout_constraintTop_toBottomOf="@+id/playerOneScore"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textAlignment="center" />
+
+    <LinearLayout
+        android:id="@+id/parentLinearVertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/playerStatus"
+        app:layout_constraintBottom_toTopOf="@id/resetGame"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="87dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="542dp">
+
+            <Button
+                android:id="@+id/btn_0"
+                android:layout_width="wrap_content"
+                android:layout_height="130dp"
+                android:layout_weight="1"
+                android:text=""
+                android:contentDescription="@string/btn_0_description"
+                android:textSize="60sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/btnBackground"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/playerStatus"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                style="?android:attr/buttonBarButtonStyle"/>
+
+            <Button
+                android:id="@+id/btn_1"
+                android:layout_width="wrap_content"
+                android:layout_height="130dp"
+                android:layout_weight="1"
+                android:text=""
+                android:contentDescription="@string/btn_1_description"
+                android:textSize="60sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/btnBackground"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toTopOf="@id/btn_0"
+                app:layout_constraintStart_toEndOf="@id/btn_0"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                style="?android:attr/buttonBarButtonStyle"/>
+
+            <Button
+                android:id="@+id/btn_2"
+                android:layout_width="wrap_content"
+                android:layout_height="130dp"
+                android:layout_weight="1"
+                android:text=""
+                android:contentDescription="@string/btn_2_description"
+                android:textSize="60sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/btnBackground"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toTopOf="@id/btn_0"
+                app:layout_constraintStart_toEndOf="@id/btn_1"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                style="?android:attr/buttonBarButtonStyle"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="542dp">
+
+            <Button
+                android:id="@+id/btn_3"
+                android:layout_width="wrap_content"
+                android:layout_height="130dp"
+                android:layout_weight="1"
+                android:text=""
+                android:contentDescription="@string/btn_3_description"
+                android:textSize="60sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/btnBackground"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/btn_0"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                style="?android:attr/buttonBarButtonStyle"/>
+
+            <Button
+                android:id="@+id/btn_4"
+                android:layout_width="wrap_content"
+                android:layout_height="130dp"
+                android:layout_weight="1"
+                android:text=""
+                android:contentDescription="@string/btn_4_description"
+                android:textSize="60sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/btnBackground"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toTopOf="@id/btn_3"
+                app:layout_constraintStart_toEndOf="@id/btn_3"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                style="?android:attr/buttonBarButtonStyle"/>
+
+            <Button
+                android:id="@+id/btn_5"
+                android:layout_width="wrap_content"
+                android:layout_height="130dp"
+                android:layout_weight="1"
+                android:text=""
+                android:contentDescription="@string/btn_5_description"
+                android:textSize="60sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/btnBackground"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toTopOf="@id/btn_3"
+                app:layout_constraintStart_toEndOf="@id/btn_4"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                style="?android:attr/buttonBarButtonStyle"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="542dp">
+
+            <Button
+                android:id="@+id/btn_6"
+                android:layout_width="wrap_content"
+                android:layout_height="130dp"
+                android:layout_weight="1"
+                android:text=""
+                android:contentDescription="@string/btn_6_description"
+                android:textSize="60sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/btnBackground"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/btn_3"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                style="?android:attr/buttonBarButtonStyle" />
+
+            <Button
+                android:id="@+id/btn_7"
+                android:layout_width="wrap_content"
+                android:layout_height="130dp"
+                android:layout_weight="1"
+                android:text=""
+                android:contentDescription="@string/btn_7_description"
+                android:textSize="60sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/btnBackground"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toTopOf="@id/btn_6"
+                app:layout_constraintStart_toEndOf="@id/btn_6"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                style="?android:attr/buttonBarButtonStyle" />
+
+            <Button
+                android:id="@+id/btn_8"
+                android:layout_width="wrap_content"
+                android:layout_height="130dp"
+                android:layout_weight="1"
+                android:text=""
+                android:contentDescription="@string/btn_8_description"
+                android:textSize="60sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/btnBackground"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toTopOf="@id/btn_6"
+                app:layout_constraintStart_toEndOf="@id/btn_7"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                style="?android:attr/buttonBarButtonStyle" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/resetGame"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/purple_500"
+        android:text="@string/reset_text"
+        app:layout_constraintTop_toBottomOf="@id/parentLinearVertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

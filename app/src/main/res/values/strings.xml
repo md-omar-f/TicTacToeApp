@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">TicTacToeApp</string>
+    <string name="player_one">Player One</string>
+    <string name="player_one_initial_score">0</string>
+    <string name="player_two_text">Player Two</string>
+    <string name="player_winning">Player one is winning</string>
+    <string name="btn_text_x">X</string>
+    <string name="reset_text">Reset</string>
+    <string name="btn_0_description">button_0</string>
+    <string name="btn_8_description">btn_8</string>
+    <string name="btn_7_description">btn_7</string>
+    <string name="btn_6_description">btn_6</string>
+    <string name="btn_5_description">btn_5</string>
+    <string name="btn_4_description">btn_4</string>
+    <string name="btn_3_description">btn_3</string>
+    <string name="btn_2_description">btn_2</string>
+    <string name="btn_1_description">btn_1</string>
+</resources>
